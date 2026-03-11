@@ -16,3 +16,9 @@ let usuarios = [
   { id: 2, nome: "Vinicius", idade: 25 },
   { id: 3, nome: "Jefferson", idade: 27 },
 ];
+
+// 06 - Em app criando rota usuarios para que ao ser acessada faça requisição o obtenha response. No caso get só pega response.
+app.get("/usuarios", (req, res) => {
+  // 07 - Para GET só utilizamos res. Na response exibe o status e os dados referentes ao mock de usuarios. Obs: O status só é exibido no teste com Postman
+  res.status(200).json(usuarios);
+});
