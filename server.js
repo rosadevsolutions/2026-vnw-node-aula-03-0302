@@ -22,3 +22,8 @@ app.get("/usuarios", (req, res) => {
   // 07 - Para GET só utilizamos res. Na response exibe o status e os dados referentes ao mock de usuarios. Obs: O status só é exibido no teste com Postman
   res.status(200).json(usuarios);
 });
+
+// 08 - Inicializar app.
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na http://localhost:${PORT}/usuarios`);
+});
